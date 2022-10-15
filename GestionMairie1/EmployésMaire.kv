@@ -1,0 +1,255 @@
+#:import utils kivy.utils
+<myGrid>
+    BoxLayout:
+        orientation:"horizontal"
+        size:root.width ,root.height
+        #size_hint_y:None
+        #height:50
+
+        RelativeLayout:
+            orientation:"vertical"
+            size_hint_x:(None)
+            width:195
+            #height:100
+            spacing:10
+
+
+            #Définition de la couleur du background GridLayout qui contient les boutons
+            canvas.before:
+                Color:
+                    rgba:(87/255,84/255,212/255,1)
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            rows:10
+            #pos_hint:{"x":0.5}
+
+
+
+
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,610)
+                pos_hint:{"center_x":0.5}
+                font_size:15
+                text:"Accueil"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,560)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Actes"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,510)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Bancs"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,460)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Documents"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+            RoundedButton3:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,410)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Employés"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,360)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Projets"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,310)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Rendez-vous"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,260)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Personne"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,210)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Comptabilité"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+            RoundedButton:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,10)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Se déconnecter"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+
+
+        BoxLayout:
+            orientation:"vertical"
+            #size:root.width ,root.height
+            #size_hint_y:None
+            #height:50
+
+
+            Label:
+                text:"BIENVENUE SUR LA PAGE DU MAIRE"
+                color:"black"
+                font_size:30
+                font_name:"Ariblk"
+                background_color:(87/255,84/255,212/255,1)
+                #background_color:utils.get_color_from_hex('#5754D4')
+                canvas.before:
+                    Color:
+                        rgba:self.background_color
+                    Rectangle:
+                        pos:self.pos
+                        size:self.size
+                bold:True
+                size_hint_y:(None)
+                height:50
+                #pos_hint_y:(None)
+                pos_hint:{"top":1}
+            RelativeLayout:
+                #Définition de la couleur du GridLayout
+                canvas.before:
+                    Color:
+                        rgba:rgba('FFFFFF')
+                    Rectangle:
+                        pos:self.pos
+                        size:self.size
+                #size_hint_x:(None)
+                #width:200
+                #height:100
+
+                RoundedButton4:
+                    text:"Rechercher"
+                    color:"black"
+                    size_hint:(None,None)
+                    width:150
+                    height:30
+                    pos:(10,450)
+                    bold:True
+
+                TextInput:
+                    mutiline:False
+                    size_hint:(None,None)
+                    width:150
+                    height:30
+                    pos:(10,400)
+                TextInput:
+                    mutiline:False
+                    size_hint:(None,None)
+                    width:150
+                    height:30
+                    pos:(200,400)
+
+#Arrondir les boutons au niveau des actes
+<RoundedButton4@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('5DD9CA')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+
+
+
+#Arrondir les boutons avec la couleur rouge
+<RoundedButton@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('#831818')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+
+#Arrondir les boutons avec la couleur grise
+<RoundedButton2@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('#D9D9D9')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+
+<RoundedButton3@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('#3B3A63')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+

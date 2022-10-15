@@ -1,0 +1,375 @@
+#:import utils kivy.utils
+<myGrid>
+    BoxLayout:
+        orientation:"horizontal"
+        size:root.width ,root.height
+        #size_hint_y:None
+        #height:50
+
+        RelativeLayout:
+            orientation:"vertical"
+            size_hint_x:(None)
+            width:195
+            #height:100
+            spacing:10
+
+
+            #Définition de la couleur du background GridLayout qui contient les boutons
+            canvas.before:
+                Color:
+                    rgba:(87/255,84/255,212/255,1)
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+            rows:10
+            #pos_hint:{"x":0.5}
+
+
+
+
+            RoundedButton3:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,610)
+                pos_hint:{"center_x":0.5}
+                font_size:15
+                text:"Accueil"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,560)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Actes"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,510)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Bancs"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,460)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Documents"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,410)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Employés"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,360)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Projets"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,310)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Rendez-vous"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,260)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Personne"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+            RoundedButton2:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,210)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Comptabilité"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+            RoundedButton:
+                size_hint:(None,None)
+                width:180
+                height:40
+                pos:(0,10)
+                pos_hint:{'center_x':0.5}
+                font_size:15
+                text:"Se déconnecter"
+                color:"black"
+                font_name:"Ariblk"
+                bold:True
+
+
+
+        BoxLayout:
+            orientation:"vertical"
+            #size:root.width ,root.height
+            #size_hint_y:None
+            #height:50
+
+
+            Label:
+                text:"BIENVENUE SUR LA PAGE DU MAIRE"
+                color:"black"
+                font_size:30
+                font_name:"Ariblk"
+                background_color:(87/255,84/255,212/255,1)
+                #background_color:utils.get_color_from_hex('#5754D4')
+                canvas.before:
+                    Color:
+                        rgba:self.background_color
+                    Rectangle:
+                        pos:self.pos
+                        size:self.size
+                bold:True
+                size_hint_y:(None)
+                height:50
+                #pos_hint_y:(None)
+                pos_hint:{"top":1}
+            RelativeLayout:
+                #Définition de la couleur du GridLayout
+                canvas.before:
+                    Color:
+                        rgba:rgba('FFFFFF')
+                    Rectangle:
+                        pos:self.pos
+                        size:self.size
+                #size_hint_x:(None)
+                #width:200
+                #height:100
+
+                RoundedLabel:
+                    text:"Bonjour"
+                    color:"black"
+                    size_hint:(None,None)
+                    width:350
+                    height:150
+                    pos:(10,450)
+                    #Definition de la couleur du label
+                    #background_color:(59/255,58/255,106/255,1)
+                    #background_color:utils.get_color_from_hex('#5754D4')
+                    #canvas.before:
+                        #Color:
+                            #rgba:self.background_color
+                        #Rectangle:
+                            #pos:self.pos
+                            #size:self.size
+                RoundedLabel2:
+                    text:"Bonjour"
+                    color:"black"
+                    size_hint:(None,None)
+                    width:350
+                    height:150
+                    pos:(410,450)
+                    #background_color:(93/255,217/255,203/255,1)
+                    #background_color:utils.get_color_from_hex('#5754D4')
+                    canvas.before:
+                        Color:
+                            rgba:self.background_color
+                        Rectangle:
+                            pos:self.pos
+                            size:self.size
+
+                RoundedLabel3:
+                    text:"Bonjour"
+                    color:"black"
+                    size_hint:(None,None)
+                    width:350
+                    height:150
+                    pos:(810,450)
+                    #background_color:(144/255,34/255,132/255,1)
+                    #background_color:utils.get_color_from_hex('#5754D4')
+                    canvas.before:
+                        Color:
+                            rgba:self.background_color
+                        Rectangle:
+                            pos:self.pos
+                            size:self.size
+                RoundedLabel4:
+                    text:"Bonjour"
+                    color:"black"
+                    size_hint:(None,None)
+                    width:350
+                    height:150
+                    pos:(10,250)
+                    #background_color:(81/255,192/255,85/255,1)
+                    #background_color:utils.get_color_from_hex('#5754D4')
+                    canvas.before:
+                        Color:
+                            rgba:self.background_color
+                        Rectangle:
+                            pos:self.pos
+                            size:self.size
+                RoundedLabel5:
+                    text:"Bonjour"
+                    color:"black"
+                    size_hint:(None,None)
+                    width:350
+                    height:150
+                    pos:(410,250)
+                    #background_color:(1,159/255,4/255,1)
+                    #background_color:utils.get_color_from_hex('#5754D4')
+                    canvas.before:
+                        Color:
+                            rgba:self.background_color
+                        Rectangle:
+                            pos:self.pos
+                            size:self.size
+
+                RoundedLabel6:
+                    text:"Bonjour"
+                    color:"black"
+                    size_hint:(None,None)
+                    width:350
+                    height:150
+                    pos:(810,250)
+                    #background_color:rgba('FFFFFF')
+                    #background_color:utils.get_color_from_hex('#5754D4')
+                    canvas.before:
+                        Color:
+                            rgba:self.background_color
+                        Rectangle:
+                            pos:self.pos
+                            size:self.size
+
+#Arrondir les boutons avec la couleur rouge
+<RoundedButton@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('#831818')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+
+#Arrondir les boutons avec la couleur grise
+<RoundedButton2@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('#D9D9D9')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+
+<RoundedButton3@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('#3B3A63')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+
+#Arrondir le label avec la couleur grise
+<RoundedLabel@Label>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('FF6347')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+<RoundedLabel2@Label>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('1C89B8')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+<RoundedLabel3@Label>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('502E5C')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+<RoundedLabel4@Label>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('51C055')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+<RoundedLabel5@Label>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('FF5F04')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+
+<RoundedLabel6@Label>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('D13434')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]

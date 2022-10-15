@@ -1,0 +1,64 @@
+#:import utils kivy.utils
+<myGrid>
+    RelativeLayout:
+        size:root.width ,root.height
+
+
+        Label:
+            text:"ACTES DE MARIAGE"
+            color:"black"
+            font_size:30
+            font_name:"Ariblk"
+
+            background_color:(87/255,84/255,212/255,1)
+            #background_color:utils.get_color_from_hex('#5754D4')
+
+            canvas.before:
+                Color:
+                    rgba:self.background_color
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+
+            bold:True
+            size_hint_y:(None)
+            height:50
+            #pos_hint_y:(None)
+            pos_hint:{"top":1}
+
+        RoundedButton4:
+            text:"Rechercher"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(10,450)
+            bold:True
+
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(10,400)
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(200,400)
+
+#Arrondir les boutons au niveau des actes
+<RoundedButton4@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('5DD9CA')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+
+
+

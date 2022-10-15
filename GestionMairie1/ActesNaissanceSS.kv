@@ -1,0 +1,378 @@
+#:import utils kivy.utils
+<myGrid>
+    RelativeLayout:
+        size:root.width ,root.height
+
+
+        Label:
+            text:"ACTES DE NAISSANCE"
+            color:"black"
+            font_size:30
+            font_name:"Ariblk"
+
+            background_color:(87/255,84/255,212/255,1)
+            #background_color:utils.get_color_from_hex('#5754D4')
+
+            canvas.before:
+                Color:
+                    rgba:self.background_color
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+
+            bold:True
+            size_hint_y:(None)
+            height:50
+            #pos_hint_y:(None)
+            pos_hint:{"top":1}
+        #Champs de saisie des informations
+        Label:
+            text:"Num_acte:"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(107,600)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(250,600)
+
+        Label:
+            text:"Nom:"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(107,550)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(250,550)
+
+        Label:
+            text:"Préom:"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(107,500)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(250,500)
+
+        Label:
+            text:"Date de naissance :"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(107,450)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(250,450)
+        Label:
+            text:"Lieu de naissance :"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(107,400)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(250,400)
+
+        Label:
+            text:"Sexe :"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(500,600)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(650,600)
+        Label:
+            text:"Prénom du père:"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(500,550)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(650,550)
+        Label:
+            text:"Profession du père :"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(500,500)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(650,500)
+
+        Label:
+            text:"Domicile du père :"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(500,450)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(650,450)
+        Label:
+            text:"Nom de la mère :"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(500,400)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(650,400)
+        Label:
+            text:"Prénom de la mère :"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(900,600)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(1100,600)
+        Label:
+            text:"Profession de la mère :"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(900,550)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(1100,550)
+        Label:
+            text:"Domicile de la mère :"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(900,500)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(1100,500)
+        Label:
+            text:"Officier d'état civil :"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(900,450)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(1100,450)
+        Label:
+            text:"Dated'établissement :"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(900,400)
+            bold:True
+        TextInput:
+            mutiline:False
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(1100,400)
+
+        #Ajout des boutons ajouter,modifier,rechercher,supprimer
+
+
+
+        RoundedButton1:
+            text:"Ajouter"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(310,330)
+            bold:True
+
+
+
+        RoundedButton2:
+            text:"Modifier"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(480,330)
+            bold:True
+
+
+        RoundedButton3:
+            text:"Supprimer"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(660,330)
+            bold:True
+
+
+        RoundedButton4:
+            text:"Rechercher"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(840,330)
+            bold:True
+
+
+        RoundedButton5:
+            text:"Retourner"
+            color:"black"
+            size_hint:(None,None)
+            width:150
+            height:30
+            pos:(1020,330)
+            bold:True
+
+        Label:
+            text:"Liste des actes de naissance"
+            color:"black"
+            font_size:20
+            font_name:"Arial"
+
+            #background_color:(87/255,84/255,212/255,1)
+            #background_color:utils.get_color_from_hex('#5754D4')
+
+            canvas.before:
+                Color:
+                    rgba:rgba('D9D9D9')
+                Rectangle:
+                    pos:self.pos
+                    size:self.size
+
+            #bold:True
+            size_hint_y:(None)
+            height:30
+            #pos_hint_y:(None)
+            pos:(0,270)
+
+
+
+
+
+
+#Arrondir les boutons "ajouter","modifier","supprimer","rechercher" et donner une couleur en meme temps
+<RoundedButton1@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('51C055')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+<RoundedButton2@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('95616E')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+<RoundedButton3@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('D13434')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+
+<RoundedButton4@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('5DD9CA')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
+
+<RoundedButton5@Button>
+    background_color:(0,0,0,0)
+    background_normal:""
+    canvas.before:
+        Color:
+            rgba:rgba('FF9D04')
+        RoundedRectangle:
+            size:self.size
+            pos:self.pos
+            radius:[18]
